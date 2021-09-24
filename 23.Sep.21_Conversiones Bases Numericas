@@ -1,0 +1,96 @@
+//  Daniela Guarnero Ortiz
+// 23.Septiembre.2021
+// Conversiones de bases decimal a: octal, binaria, hexadecimal
+
+#include <stdio.h>
+#include <math.h>
+int main(void){
+	int opcion, num, i, a[100], j;
+	char hex, salir=0;
+	
+	
+	while (salir!='N' && salir!='n')
+	{
+		printf("Ingrese la cantidad en base decimal que desea convertir: \n");
+		scanf("%d", &num);
+		printf("Indique el a la base que desea convertir su numero decimal:\n 1. Binario\n 2. Octal\n 3. Hexadecimal\n");
+		scanf("%d", &opcion);
+	
+		switch (opcion)
+		{
+			case 1: // Decimal a binario
+				i=0;
+				while (num>0){
+					a[i]=num%2;
+					num=num/2;
+					++i;
+				}
+				for (j=i-1; j>=0; --j)
+				printf("%d", a[j]);
+			break;
+			
+			case 2: // Decimal a octal
+				i=0;
+				while (num>0){
+					a[i]=num%8;
+					num=num/8;
+					++i;
+				}
+				for (j=i-1; j>=0; --j)
+				printf("%d", a[j]);
+			break;
+			
+			case 3: // Decimal a Hexadecimal
+				i=0;
+				while (num>0){
+					a[i]=num%16;
+					num=num/16;
+					++i;
+				}
+				for (j=i-1; j>=0; --j)
+				{
+				  if (a[j]<=10)
+				  {
+					printf("%d", a[j]);
+			      }
+				  if (a[j]==10)
+				  {
+				  	a[j]='A';
+				  	printf("%c", a[j]);
+				  }
+				  if (a[j]==11)
+				  {
+				  	a[j]='B';
+				  	printf("%c", a[j]);
+				  }
+				  if (a[j]==12)
+				  {
+				  	a[j]='C';
+				  	printf("%c", a[j]);
+				  }
+				  if (a[j]==13)
+				  {
+				  	a[j]='D';
+				  	printf("%c", a[j]);
+				  }
+				  if (a[j]==14)
+				  {
+				  	a[j]='E';
+				  	printf("%c", a[j]);
+				  }
+				  if (a[j]==15)
+				  {
+				  	a[j]='F';
+				  	printf("%c", a[j]);
+				  }
+				}
+			break;
+			default:
+			printf("Operacion invalida");	   
+		}
+		printf("\nDesea realizar un nuevo calculo?\n S/N	");
+		scanf("%s", &salir);
+	}
+		printf("\nGracias por utilizar la calculadora de conversiones de bases numericas\n");
+	return 0;
+}
