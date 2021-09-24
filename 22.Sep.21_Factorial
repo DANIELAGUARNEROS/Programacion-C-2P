@@ -1,0 +1,29 @@
+//  Daniela Guarnero Ortiz
+// 22.Septiembre.2021
+// Factorial de un número
+
+#include <stdio.h>
+#include <math.h>
+
+int main(void){
+	int n, x;
+	char opcion;
+	
+	while(opcion!='N' && opcion!='n'){
+		printf("Indica el valor del que necesitas saber el factorial: \n");
+		scanf("%d", &n);
+		x=1;
+		while (n>1){
+			x=x*n;
+			n--;
+			printf("(%d)", x);
+		}
+		printf("\n El factorial es: %d\n", x);
+	
+		printf("\n ¿Desea hacer el calculo para otro numero? S/N \n ");
+			scanf("%s", &opcion);
+	}
+	 printf("Gracias por utilizar la calculadora de factoriales!  ");
+	 
+	return 0;
+}
