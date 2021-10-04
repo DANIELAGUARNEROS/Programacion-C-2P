@@ -1,0 +1,47 @@
+//  Daniela Guarneros Ortiz
+// 30.Septiembre.2021
+// 2 Ejercicio de arreglos matrices dadas por el usuario
+
+#include <stdio.h>
+#include <conio.h>
+
+int main(){
+	int x, y;
+	int matriz[x][y], i, j, vector[x], vector2[y];
+	
+	printf("Indica una dimension de la matriz\n");
+	scanf("%d", &x);
+	printf("Indica una dimension de la matriz\n");
+	scanf("%d", &y);
+	
+	for (i=1; i<=x; i++)
+		for(j=1; j<=y; j++)
+		{
+		printf("Indica el valor de la posicion %d, %d:  ", i, j);
+		scanf(" %d", &matriz[i][j]);
+		
+		vector[i]=vector[i]+matriz[i][j];
+		
+		vector2[j]=vector2[j]+matriz[i][j];
+		}
+		
+		printf("Los valores obtenidos son: \n\n");
+		for(i=1; i<=x; i++){
+			printf("\n");
+			for(j=1; j<=y; j++)
+			{
+			printf("%d\t", matriz[i][j]);	
+			}
+		printf("\n");
+		}
+		printf("\n La suma de las filas es: \n");
+		for(i=1; i<=x; i++){
+		printf(" %d \n", vector[i]);	
+		}
+		printf("\n La suma de las columnas es: \n");
+		for(j=1; j<=y; j++){
+		printf(" %d \t", vector2[j]);	
+		}
+	getch();
+	return 0;		
+}
