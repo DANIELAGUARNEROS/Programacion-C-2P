@@ -1,0 +1,23 @@
+//  Daniela Guarneros Ortiz
+// 07.Octubre.2021
+//  Video 2, punteros para intercambiar valores 
+
+#include <stdio.h>
+#include <iostream>
+
+using namespace std;
+
+void intercambia (int *x, int *y){
+	int z;
+	z=*x;
+	*x=*y;
+	*y=z;
+}
+int main(void){
+	int a=7, b=8;
+	
+	printf("a=%d  b=%d\n", a, b);
+	intercambia(&a, &b);
+	printf("a=%d  b=%d\n", a, b);
+	
+}
