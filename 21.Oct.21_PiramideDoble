@@ -1,0 +1,43 @@
+// Daniela Guarneros Ortiz
+// 21.Octubre.2021
+// solicite al usuario n, piramide doble. Pr3
+
+#include <stdio.h>
+void imp1(int);
+void imp2(int);
+
+int main(void)
+{
+	int n;
+	printf("Ingrese un numero entero:  ");
+	scanf("%d", &n);
+	imp1(n);
+	imp2(n);
+	
+}
+
+void imp1(int b)
+{
+	int i, j;
+	for (i=0; i<=b; i++)
+	{
+		for (j=1; j<=i; j++)
+		{
+			printf("%d  \t", j);
+		}
+		printf("\n");
+	}	
+}
+
+void imp2(int c)
+{
+	int k, l;
+	for (k=c-1; k>=0; k--)
+	{
+		for (l=1; l<=k; l++)
+		{
+			printf("%d\t", l);
+		}
+		printf("\n");
+	}
+}
