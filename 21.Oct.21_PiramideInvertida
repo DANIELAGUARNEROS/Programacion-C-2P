@@ -1,0 +1,32 @@
+// Daniela Guarneros Ortiz
+// 21.Octubre.2021
+// solicite al usuario n, piramide mayor a menor PIRAMIDE INVERTIDA
+
+#include <stdio.h>
+void imp1(int);
+
+int main(void)
+{
+	int n;
+	printf("Ingrese un numero entero:  ");
+	scanf("%d", &n);
+	imp1(n);
+	
+}
+
+void imp1(int b)
+{
+	int k, l, x;
+	for (k=b; k>=1; k--)
+	{
+		for (x=b; x>=k; x--)
+		{
+			printf("\t");
+		}
+		for (l=k; l>=1; l--)
+		{	
+			printf("%d\t", l);
+		}
+		printf("\n");
+	}	
+}
