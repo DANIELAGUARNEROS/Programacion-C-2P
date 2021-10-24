@@ -1,0 +1,32 @@
+// Daniela Guarneros Ortiz
+// 21.Octubre.2021
+// solicite al usuario n, piramide de mayor a menor abajo arriba p4 
+
+#include <stdio.h>
+void imp3(int);
+
+int main(void)
+{
+	int n;
+	printf("Ingrese un numero entero:  ");
+	scanf("%d", &n);
+	imp3(n);
+	
+}
+
+void imp3(int c)
+{
+	int k, l, x;
+	for (k=0; k<=c; k++)
+	{
+		for (x=c; x>=k; x--)
+		{
+			printf("\t");
+		}
+		for (l=k; l>=1; l--)
+		{	
+			printf("%d  \t", l);
+		}
+		printf("\n");
+	}
+}
