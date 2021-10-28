@@ -1,0 +1,21 @@
+// Daniela Guarneros Ortiz 
+// 28.Octubre.2021 - Evaluación Segundo Parcial
+// Uso de puntero
+
+#include <stdio.h>
+
+int main(){
+	int i;
+	float x[5];
+	float *x1[5];
+	
+	for (i=0; i<5; i++){
+	printf("Indique 5 números: ");
+	scanf("%f", &x[i]);
+	}
+	
+	printf("Nombre\t Contenido\t Direccion de memoria\n\n");
+	for (i=0; i<5; i++){
+		printf("x[ %d ]\t %f \t %d \n", i, x[i], x1[i]);
+	}
+}
