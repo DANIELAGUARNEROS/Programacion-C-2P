@@ -1,0 +1,25 @@
+// Daniela Guarneros Ortiz
+// ¨parte 1
+
+#include<stdio.h>
+#include<math.h>
+
+int main() {
+	int x[10];
+	int i;
+	int a=0;
+	int sum[10]={0,0,0,0,0,0,0,0,0,0};
+	
+	for(i=0; i<10;i++){
+		if(x[a]>0) {
+			printf("introduce 10 numeros enteros y si es negativo se corta %d:", i+1);
+			scanf("%d" ,&x[a]);
+		}
+		sum[a]=sum[a]+x[a];
+	}
+	if(sum[a]>0){
+       printf("La media es %.2f", sum[a]/10.0);
+   }
+	
+	return 0;	
+}
