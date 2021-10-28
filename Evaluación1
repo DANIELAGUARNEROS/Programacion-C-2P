@@ -1,0 +1,24 @@
+// Daniela Guarneros Ortiz 
+// 28.Octubre.2021 - Evaluaciòn Segundo Parcial
+// Leer 10 nùmeros enteros sacar su media 
+
+#include <stdio.h>
+
+int main(){
+	int sum, x=0, i;
+	float media;
+	int num[10]={0, 0, 0, 0, 0, 0, 0, 0, 0};
+	
+	for (i=0; i<10; i++){
+		if (num[x]>0){
+			printf("Introduzca un numero entero: ");
+			scanf("%d", &num[x]);
+		}
+		sum[x]=sum[x]+num[x];
+	}
+		media=sum/10.0;
+	if (sum[x]>0)
+	printf("\nEl resultado de la media es: %2f\n", media);
+	
+	return 0;
+}
