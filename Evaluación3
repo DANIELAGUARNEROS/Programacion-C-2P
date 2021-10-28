@@ -1,0 +1,39 @@
+// Daniela GUarneros Ortiz
+// 28.Octubre.2021
+// 25 números por ordenamiento de selección
+
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+
+int main(){
+
+    int conjunto[25]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+    int i,j,h,min;
+    float x;
+
+	printf("Introduzca 25 números enteros: ");
+    for(i=0; i<25; i++){
+    	
+        scanf("%d", &conjunto[i]);
+    }
+
+    for(i=0; i<25; i++){
+        min=i;
+        for(j=i+1; j<25; j++){
+            if(conjunto[j]<conjunto[min]){
+                min=j;
+            }
+        }
+        h=conjunto[i];
+        conjunto[i]=conjunto[min];
+        conjunto[min]=h;
+
+        x=x+conjunto[i];
+    }
+    printf("Los números ordenados son: \n");
+    for(i=0; i<25; i++){
+        printf("[%i]\t", conjunto[i]);
+    }
+    printf("\n\nEl promedio de los números ingresados es: %.2f", x/25.0);
+}
