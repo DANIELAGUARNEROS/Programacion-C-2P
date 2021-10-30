@@ -1,0 +1,73 @@
+// Daniela Guarneros Ortiz
+// 21.Octubre.2021
+// solicite al usuario n, tipo estrella
+
+#include <stdio.h>
+void ARRIBA(int a);
+void ABAJO(int b);
+
+int main(void)
+{
+	int n;
+	printf("Ingrese un numero entero:  ");
+	scanf("%d", &n);
+	
+	ARRIBA(n);
+	ABAJO(n);
+	
+	return 0;
+}
+
+void ARRIBA(int a)
+{
+	int x,c,h,i,j;
+	
+	for(h=1; h<=a; h++)
+	{
+		for(i=a; i>h; i--)
+		{
+			printf("\t");
+		}
+		for(j=h; j>0; j--)
+		{
+			printf("%d\t",j);
+			if (j<=1)
+			{
+				for(x=h; x<=h; x++)
+				{
+					for(c=2; c<=x; c++)
+					{
+					printf("%d\t",c);
+					}
+				}
+			}
+		}
+			printf("\n");
+	}
+}
+
+void ABAJO(int b)
+{
+	int m,n,o,e,f;
+	
+	for(m=b-1; m>=1; m--)
+	{
+		for(n=b-1; n>=m; n--)
+		{
+			printf("\t");
+		}
+		for(o=m; o>0; o--)
+		{
+			printf("%d\t",o);
+		}
+		if(o<=1)
+		{
+			for(e=m; e>=m; e--)
+			{
+				for(f=1; f<e; f++)
+					printf("%d\t", f+1);
+			}
+		}
+		printf("\n");
+	}
+}
